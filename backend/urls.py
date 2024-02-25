@@ -6,7 +6,7 @@ from .views import *
 # Create a router and register the viewsets
 router = DefaultRouter()
 
-router.register(r'auth?', AuthViewSet, basename='auth')
+router.register(r'auth', AuthViewSet, basename='auth')
 
 urlpatterns = [
     path('api', include(router.urls)),

@@ -56,7 +56,7 @@ Before you begin, ensure you have met the following requirements:
 ### Running the API
 
    ```
-   http://127.0.0.1:8000/
+   http://127.0.0.1:8000/api/
 
    ```
 
