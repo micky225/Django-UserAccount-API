@@ -39,7 +39,7 @@ Before you begin, ensure you have met the following requirements:
 * To create a normal virtualenv (example .venv) and activate it (see Code below).
 
   ```
-  virtualenv --python=python3.18.10 .venv
+  virtualenv --python=python3.8.10 .venv
   
   source .venv/bin/activate
 
@@ -55,5 +55,9 @@ Before you begin, ensure you have met the following requirements:
 
 ### Running the API
 
-*The API will be available at http://localhost:8000/.*
+   ```
+   http://127.0.0.1:8000/
+
+   ```
+
 
