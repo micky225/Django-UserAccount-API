@@ -21,7 +21,7 @@ Before you begin, ensure you have met the following requirements:
 - Postman or a similar tool for API testing.
 
 ## Technologies
-* Python 3.8.10
+* Python3 3.8.10
 * Django 4.2.10
 * Django Rest Framework 3.14.0
 * SQLite3
