@@ -37,12 +37,19 @@ class AuthViewSet(viewsets.ViewSet):
                     password=password
                 )
                 return Response(
+                    {
+                    "message": "User Account Created!!"
+                },
                    status=status.HTTP_201_CREATED
                 )
             else:
                 return Response(
                     {"error": "Email and password are required."},
                     status=status.HTTP_400_BAD_REQUEST
+                )
+
+            return Response(
+                   status=status.HTTP_201_CREATED
                 )
         except Exception as e:
             return Response({'error': f'Internal Server Error: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)  
@@ -71,12 +78,15 @@ class AuthViewSet(viewsets.ViewSet):
                 return Response({'error': 'Invalid password'}, status=status.HTTP_401_UNAUTHORIZED)
         else:
             return Response({'error': 'Invalid email'}, status=status.HTTP_401_UNAUTHORIZED)
-        
+
+
+
+
+
         # logout method
     @action(detail=False, methods=['post'])
     def logout(self, request):
         logout(request)
-
         return Response({'message': 'Logout successful'}, status=status.HTTP_200_OK)
 
 
