@@ -5,7 +5,6 @@ django-cors-headers==4.3.1
 djangorestframework==3.14.0
 gunicorn==21.2.0
 packaging==23.2
-pkg_resources==0.0.0
 pytz==2024.1
 sqlparse==0.4.4
 typing_extensions==4.9.0
