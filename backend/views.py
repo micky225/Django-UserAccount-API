@@ -31,7 +31,7 @@ class AuthViewSet(viewsets.ViewSet):
             if password != password_confirm:
                 return Response({'error': 'Password do not match'}, status=status.HTTP_400_BAD_REQUEST)
 
-            if email and password:
+            if (email and password):
                 user = User.objects.create_user(
                     email=email,
                     password=password
@@ -83,7 +83,7 @@ class AuthViewSet(viewsets.ViewSet):
 
 
 
-        # logout method
+    # logout method
     @action(detail=False, methods=['post'])
     def logout(self, request):
         logout(request)
@@ -94,6 +94,6 @@ class AuthViewSet(viewsets.ViewSet):
 
 
 
-
+    
 
 
